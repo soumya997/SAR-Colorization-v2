@@ -11,15 +11,15 @@ rho13 = squeeze(C(1,3,:,:))./sqrt(HHHH.*squeeze(C(3,3,:,:))+1e-10);
 rho23 = squeeze(C(2,3,:,:))./sqrt(squeeze(C(2,2,:,:).*C(3,3,:,:))+1e-10);
 
 const_array = zeros(9,32);
-[~,T] = histeq(delta1,32); const_array(1,:) = unique(T);
-[~,T] = histeq(delta2,39); const_array(2,:) = unique(T);
-[~,T] = histeq(delta3,32); const_array(3,:) = unique(T);
-[~,T] = histeq((real(rho12)+1.0)./2,32); const_array(4,:) = unique(T)*2-1;
-[~,T] = histeq((imag(rho12)+1.0)./2,32); const_array(5,:) = unique(T)*2-1;
-[~,T] = histeq((real(rho13)+1.0)./2,32); const_array(6,:) = unique(T)*2-1;
-[~,T] = histeq((imag(rho13)+1.0)./2,32); const_array(7,:) = unique(T)*2-1;
-[~,T] = histeq((real(rho23)+1.0)./2,32); const_array(8,:) = unique(T)*2-1;
-[~,T] = histeq((imag(rho23)+1.0)./2,32); const_array(9,:) = unique(T)*2-1;
+[a,T] = histeq(delta1,32); const_array(1,:) = unique(T);
+[a,T] = histeq(delta2,39); const_array(2,:) = unique(T);
+[a,T] = histeq(delta3,32); const_array(3,:) = unique(T);
+[a,T] = histeq((real(rho12)+1.0)./2,32); const_array(4,:) = unique(T)*2-1;
+[a,T] = histeq((imag(rho12)+1.0)./2,32); const_array(5,:) = unique(T)*2-1;
+[a,T] = histeq((real(rho13)+1.0)./2,32); const_array(6,:) = unique(T)*2-1;
+[a,T] = histeq((imag(rho13)+1.0)./2,32); const_array(7,:) = unique(T)*2-1;
+[a,T] = histeq((real(rho23)+1.0)./2,32); const_array(8,:) = unique(T)*2-1;
+[a,T] = histeq((imag(rho23)+1.0)./2,32); const_array(9,:) = unique(T)*2-1;
 
 k = 0;
 for i = 1:300:(size(delta1,1)-400)

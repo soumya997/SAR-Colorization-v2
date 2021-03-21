@@ -7,7 +7,7 @@
 
 %% Load data -> C 
 load('./data/C_SH.mat');
-[~,~,row, col] = size(C);
+[a,b,row, col] = size(C);
 
 % display the image
 fg = figure();
@@ -31,7 +31,7 @@ save('./data/const_array.mat', 'const_array');
 %% Reconstructed full-pol features -> C_r
 filename = './data/test_sh.mat';  % reconstructed features
 C_r = Recons_from_feature(filename, './data/data_SH.mat');
-[~,~,row, col] = size(C_r);
+[c,d,row, col] = size(C_r);
 
 % display the recovered image
 fg = figure();
@@ -43,7 +43,7 @@ my_imrgb(C_r(1,1,:,:),C_r(2,2,:,:),C_r(3,3,:,:));
 
 %% Test results
 load('./data/C_NJ.mat');
-[~,~,row, col] = size(C);
+[e,f,row, col] = size(C);
 
 % display the image
 fg = figure();
@@ -64,7 +64,7 @@ save('./data/data_NJ.mat', 'data_H', 'num_row', 'num_col', 'num_total');
 %% Reconstructed full-pol features -> C_r
 filename = './data/test_nj.mat';
 C_r = Recons_from_feature(filename, './data/data_NJ.mat');
-[~,~,row, col] = size(C_r);
+[g,h,row, col] = size(C_r);
 
 % display the recovered image
 fg = figure();
