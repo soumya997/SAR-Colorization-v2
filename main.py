@@ -63,7 +63,7 @@ class Pol_SD(object):
         sio.savemat('./data/mean_and_var.mat', {'mean': temp_mean, 'var': temp_var})
 
         start_time = time.time()
-
+        #new line goes here
         # Training steps:=====================================
         counter = 0
         temp_list1 = np.linspace(0, self.output_size*self.output_size-1, self.output_size*self.output_size, dtype = 'int')
